@@ -19,11 +19,11 @@
             Transportadora:</td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtCodTransportadora" runat="server" AutoPostBack="True" 
-                CssClass="CampoCadastro" MaxLength="6" Width="50px"></asp:TextBox>
-            <asp:ImageButton ID="BtnFiltrarCliente" runat="server" 
+                CssClass="CampoCadastro" MaxLength="6" Width="50px" Enabled="false"></asp:TextBox>
+           <%-- <asp:ImageButton ID="BtnFiltrarCliente" runat="server" 
                 ImageUrl="~/Imagens/search.png" ToolTip="Pesquisar" 
                 
-                onclientclick="ShowEditModal('../Pesquisas/WFPTransportadora.aspx?textbox=TxtCodTransportadora','EditModalPopupClientes','IframeEdit');" />
+                onclientclick="ShowEditModal('../Pesquisas/WFPTransportadora.aspx?textbox=TxtCodTransportadora','EditModalPopupClientes','IframeEdit');" Width="16px" />--%>
                 </td>
     </tr>
     <tr>
@@ -33,29 +33,14 @@
                 <asp:Label ID="LblNomeTransportadora" runat="server" Font-Bold="False"></asp:Label>
         </td>
     </tr>
-    <tr>
-        <td style="text-align: right">
-            <asp:Label ID="LblAuxLabel1" runat="server"></asp:Label>
-        </td>
-        <td style="text-align: left">
-            <uc1:TextBoxData ID="TxtAux1" runat="server" Width="90" />
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align: right">
-            <asp:Label ID="LblAux2Label" runat="server"></asp:Label>
-        </td>
-        <td style="text-align: left">
-            <asp:TextBox ID="TxtAux2" runat="server" CssClass="CampoCadastro" Width="100px"></asp:TextBox>
-        </td>
-    </tr>
+    
      <tr>
         <td style="text-align: right; vertical-align: top;">
             <asp:Label ID="Label2" runat="server" Text="Detalhes Formulação:"></asp:Label>
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtDetalhesFormulacao" runat="server" CssClass="CampoCadastro" Height="40px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
      <tr>
@@ -64,7 +49,7 @@
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtDetalhesEmbalagem" runat="server" CssClass="CampoCadastro" Height="40px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
      <tr>
@@ -73,7 +58,7 @@
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtDetalhesRotulos" runat="server" CssClass="CampoCadastro" Height="40px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
      <tr>
@@ -82,7 +67,7 @@
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtDetalhesPrazoEntrega" runat="server" CssClass="CampoCadastro" Height="40px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
      <tr>
@@ -91,7 +76,7 @@
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtDetalhesPagamento" runat="server" CssClass="CampoCadastro" Height="40px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
    
@@ -101,7 +86,7 @@
         </td>
         <td style="text-align: left">
             <asp:TextBox ID="TxtObservacao" runat="server" Height="70px" 
-                TextMode="MultiLine" Width="400px"></asp:TextBox>
+                TextMode="MultiLine" Width="400px" Enabled="false"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -120,12 +105,12 @@
         <td style="text-align: left; border-width: 1px; border-color: #CCCCCC; text-align: right; vertical-align: top; border-top-style: solid;">
             &nbsp;</td>
     </tr>
-    <tr>
+    <%--<tr>
         <td style="text-align: right; vertical-align: top;">
             &nbsp;</td>
         <td style="text-align: left">
             <asp:Button ID="BtnGravar" runat="server" Text="Salvar" CssClass="Botao" 
                 Height="23px" />
         </td>
-    </tr>
+    </tr>--%>
     </table>

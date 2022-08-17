@@ -155,6 +155,8 @@
     <Content Include="Forms\WGManual.aspx" />
     <Content Include="Forms\WGManual01.aspx" />
     <Content Include="Forms\WGManual02.aspx" />
+    <Content Include="Forms\WGNegociacaoDespesa.aspx" />
+    <Content Include="Forms\WGNegociacaoHistorico.aspx" />
     <Content Include="Forms\WGNegociacaoItem.aspx" />
     <Content Include="Forms\WGNotasFiscais.aspx" />
     <Content Include="Forms\WGRelatorios.aspx" />
@@ -487,6 +489,20 @@
     </Compile>
     <Compile Include="Forms\WGManual02.aspx.vb">
       <DependentUpon>WGManual02.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoDespesa.aspx.designer.vb">
+      <DependentUpon>WGNegociacaoDespesa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoDespesa.aspx.vb">
+      <DependentUpon>WGNegociacaoDespesa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoHistorico.aspx.designer.vb">
+      <DependentUpon>WGNegociacaoHistorico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoHistorico.aspx.vb">
+      <DependentUpon>WGNegociacaoHistorico.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Forms\WGNegociacaoItem.aspx.designer.vb">

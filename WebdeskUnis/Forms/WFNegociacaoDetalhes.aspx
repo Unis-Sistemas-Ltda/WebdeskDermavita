@@ -31,7 +31,7 @@
                             <asp:MenuItem Selected="True" Text="Proposta" Value="WFNegociacaoCabecalho.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Itens" Value="WGNegociacaoItem.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Outras Informações" Value="WFNegociacaoOutrasInformacoes.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Histórico" Value="WGNegociacaoHistorico.aspx"></asp:MenuItem>                            
+                           <%-- <asp:MenuItem Text="Histórico" Value="WGNegociacaoHistorico.aspx"></asp:MenuItem>    --%>                        
                             <asp:MenuItem Text="Despesas Acessórias" Value="WGNegociacaoDespesa.aspx"></asp:MenuItem> 
                         </Items>
                     </asp:Menu>

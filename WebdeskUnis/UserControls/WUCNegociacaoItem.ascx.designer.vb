@@ -20,7 +20,7 @@ Partial Public Class WUCNegociacaoItem
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.AjaxControlToolkit.ToolkitScriptManager
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
     '''LblBaseIcmsSubstituicao control.
@@ -221,15 +221,6 @@ Partial Public Class WUCNegociacaoItem
     Protected WithEvents TxtCodItem As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''BtnFiltrarItem control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents BtnFiltrarItem As Global.System.Web.UI.WebControls.ImageButton
-
-    '''<summary>
     '''LblDescricaoItem control.
     '''</summary>
     '''<remarks>
@@ -380,7 +371,7 @@ Partial Public Class WUCNegociacaoItem
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtPrecoUnitario As Global.WebdeskUnis.TextBoxNumerico
+    Protected WithEvents TxtPrecoUnitario As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label11 control.
@@ -410,13 +401,13 @@ Partial Public Class WUCNegociacaoItem
     Protected WithEvents LblValorUD As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TxtValorDesconto control.
+    '''TxtValorDesconto2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtValorDesconto As Global.WebdeskUnis.TextBoxNumerico
+    Protected WithEvents TxtValorDesconto2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''TxtPrazoEntrega control.

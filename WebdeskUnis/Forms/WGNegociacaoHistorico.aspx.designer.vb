@@ -11,7 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WUCNegociacaoOutrasInformacoes
+Partial Public Class WGNegociacaoHistorico
+
+    '''<summary>
+    '''form1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
     '''LblErro control.
@@ -23,128 +32,164 @@ Partial Public Class WUCNegociacaoOutrasInformacoes
     Protected WithEvents LblErro As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TxtCodTransportadora control.
+    '''GridView3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtCodTransportadora As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents GridView3 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''LblNomeTransportadora control.
+    '''SqlDataSource3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LblNomeTransportadora As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents SqlDataSource3 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Label2 control.
+    '''Label14 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label14 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TxtDetalhesFormulacao control.
+    '''GridView6 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtDetalhesFormulacao As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents GridView6 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Label3 control.
+    '''SqlDataSource6 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents SqlDataSource6 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''TxtDetalhesEmbalagem control.
+    '''Label15 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtDetalhesEmbalagem As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label15 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Label4 control.
+    '''GridViewFUCli control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents GridViewFUCli As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''TxtDetalhesRotulos control.
+    '''SqlDataSourceFUCli control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtDetalhesRotulos As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents SqlDataSourceFUCli As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Label5 control.
+    '''Label13 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label13 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TxtDetalhesPrazoEntrega control.
+    '''DdlSituacao control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtDetalhesPrazoEntrega As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents DdlSituacao As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Label6 control.
+    '''GridView4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents GridView4 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''TxtDetalhesPagamento control.
+    '''SqlDataSource4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtDetalhesPagamento As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents SqlDataSource4 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Label1 control.
+    '''GridView5 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents GridView5 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''TxtObservacao control.
+    '''SqlDataSource5 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtObservacao As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents SqlDataSource5 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''GridView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''SqlDataSource1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''GridView2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView2 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''SqlDataSource2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

@@ -816,83 +816,107 @@
         End Try
     End Sub
 
+    'Public Sub Alterar()
+    '    Dim strSql As String = ""
+
+    '    Try
+    '        If Referencia Is Nothing Then
+    '            Referencia = ""
+    '        End If
+    '        If String.IsNullOrWhiteSpace(PrazoEntrega) Then
+    '            PrazoEntrega = "null"
+    '        End If
+    '        If String.IsNullOrWhiteSpace(TpPrazoEntrega) Then
+    '            TpPrazoEntrega = "null"
+    '        End If
+    '        strSql += " update negociacao_cliente_item "
+    '        strSql += "    set cod_item = '" + CodItem + "', "
+    '        strSql += "        referencia = '" + Referencia.Trim + "', "
+    '        strSql += "        lote = '" + Lote.Trim + "', "
+    '        strSql += "        qtd_pedida = " + ValorNumericoBanco(Quantidade, 4) + ", "
+    '        strSql += "        qtd_ud = " + ValorNumericoBanco(QuantidadeUD, 4) + ", "
+    '        strSql += "        preco_unitario = " + ValorNumericoBanco(PrecoUnitario, 4) + ", "
+    '        strSql += "        preco_unitario_ud = " + ValorNumericoBanco(PrecoUnitarioUD, 4) + ", "
+    '        strSql += "        preco_unitario_tabela = " + ValorNumericoBanco(PrecoUnitarioTabela, 4) + ", "
+    '        strSql += "        preco_unitario_sem_componente = " + ValorNumericoBanco(PrecoUnitarioSemComponente, 4) + ", "
+    '        strSql += "        cod_unidade = " + IIf(String.IsNullOrEmpty(Trim(CodUnidade)) OrElse CodUnidade = "0", "null", "'" + CodUnidade + "'") + ", "
+    '        strSql += "        narrativa = '" + Narrativa + "', "
+    '        strSql += "        icms_substituicao = " + ValorNumericoBanco(ICMSST, 4) + ", "
+    '        strSql += "        perc_desconto = " + ValorNumericoBanco(PercentualDesconto, 4) + ", "
+    '        strSql += "        valor_desconto = " + ValorNumericoBanco(ValorDesconto, 4) + ", "
+    '        strSql += "        valor_ipi = " + ValorNumericoBanco(IPI, 4) + ", "
+    '        strSql += "        valor_icms = " + ValorNumericoBanco(ICMS, 4) + ", "
+    '        strSql += "        cod_natur_oper = '" + CodNaturOper + "', "
+    '        strSql += "        valor_total_mercadoria = " + ValorNumericoBanco(ValorTotal, 4) + ", "
+    '        strSql += "        valor_mercadoria = " + ValorNumericoBanco(ValorMercadoria, 4) + ", "
+    '        strSql += "        aliquota_icms = " + ValorNumericoBanco(AliquotaICMS, 4) + ", "
+    '        strSql += "        aliquota_ipi = " + ValorNumericoBanco(AliquotaIPI, 4) + ", "
+    '        strSql += "        base_icms_substituicao = " + ValorNumericoBanco(BaseICMSSubstituicao, 4) + ", "
+    '        strSql += "        altura = " + ValorNumericoBanco(Altura, 2) + ", "
+    '        strSql += "        largura = " + ValorNumericoBanco(Largura, 2) + ", "
+    '        strSql += "        espessura = " + ValorNumericoBanco(Espessura, 4) + ", "
+    '        strSql += "        perc_desconto_unitario1 = " + ValorNumericoBanco(PercDescontoUnitario1, 4) + ", "
+    '        strSql += "        perc_desconto_unitario2 = " + ValorNumericoBanco(PercDescontoUnitario2, 4) + ", "
+    '        strSql += "        perc_desconto_unitario3 = " + ValorNumericoBanco(PercDescontoUnitario3, 4) + ", "
+    '        strSql += "        perc_desconto_unitario4 = " + ValorNumericoBanco(PercDescontoUnitario4, 4) + ", "
+    '        strSql += "        perc_desconto_unitario5 = " + ValorNumericoBanco(PercDescontoUnitario5, 4) + ", "
+    '        strSql += "        perc_acrescimo_unitario = " + ValorNumericoBanco(PercAcrescimoUnitario, 4) + ", "
+    '        strSql += "        recurso                 = " + ValorNumericoBanco(Recurso, 4) + ", "
+    '        strSql += "        prazo_entrega = " + PrazoEntrega + ", "
+    '        strSql += "        tp_prazo_entrga = " + TpPrazoEntrega + ", "
+
+    '        If String.IsNullOrEmpty(NumeroSerie) Then
+    '            strSql += "        numero_serie = null,"
+    '        Else
+    '            strSql += "        numero_serie = '" + NumeroSerie + "', "
+    '        End If
+
+    '        strSql += "        aux1 = '" + Aux1 + "', "
+    '        strSql += "        aux2 = '" + Aux2 + "', "
+    '        strSql += "        aux3 = '" + Aux3 + "', "
+    '        strSql += "        aux4 = '" + Aux4 + "', "
+    '        strSql += "        aux5 = '" + Aux5 + "', "
+    '        strSql += "        aux6 = '" + Aux6 + "', "
+    '        strSql += "        aux7 = '" + Aux7 + "', "
+    '        strSql += "        aux8 = '" + Aux8 + "', "
+    '        strSql += "        aux9 = '" + Aux9 + "', "
+    '        strSql += "        aux10 = '" + Aux10 + "',"
+    '        strSql += "        aux11 = '" + Aux11 + "', "
+    '        strSql += "        aux12 = '" + Aux12 + "'"
+    '        strSql += "        fd_acao_desejada_funcao = '" + FdAcaoDesejadaFuncao + "', "
+    '        strSql += "        fd_coloracao = " + FdColoracao + ", "
+    '        strSql += "        fd_cor_referencia = '" + FdCorReferencia + "', "
+    '        strSql += "        fd_descricao_produto = '" + FdDescricaoProduto + "', "
+    '        strSql += "        fd_nome_produto = '" + FdNomeProduto + "', "
+    '        strSql += "        fd_odor = '" + FdOdor + "', "
+    '        strSql += "        fd_odor_direcionamento = '" + FdOdorDirecionamento + "', "
+    '        strSql += "        fd_odor_referencia = '" + FdOdorReferencia + "', "
+    '        strSql += "  where empresa = " + Empresa
+    '        strSql += "    and estabelecimento = " + Estabelecimento
+    '        strSql += "    and cod_negociacao_cliente = " + CodNegociacao
+    '        strSql += "    and seq_item = " + SeqItem
+    '        objAcessoDados.ExecutarSql(strSql)
+    '    Catch ex As Exception
+    '        Throw ex
+    '    End Try
+
+    'End Sub
+
     Public Sub Alterar()
         Dim strSql As String = ""
 
         Try
-            If Referencia Is Nothing Then
-                Referencia = ""
-            End If
-            If String.IsNullOrWhiteSpace(PrazoEntrega) Then
-                PrazoEntrega = "null"
-            End If
-            If String.IsNullOrWhiteSpace(TpPrazoEntrega) Then
-                TpPrazoEntrega = "null"
-            End If
+
             strSql += " update negociacao_cliente_item "
-            strSql += "    set cod_item = '" + CodItem + "', "
-            strSql += "        referencia = '" + Referencia.Trim + "', "
-            strSql += "        lote = '" + Lote.Trim + "', "
-            strSql += "        qtd_pedida = " + ValorNumericoBanco(Quantidade, 4) + ", "
-            strSql += "        qtd_ud = " + ValorNumericoBanco(QuantidadeUD, 4) + ", "
-            strSql += "        preco_unitario = " + ValorNumericoBanco(PrecoUnitario, 4) + ", "
-            strSql += "        preco_unitario_ud = " + ValorNumericoBanco(PrecoUnitarioUD, 4) + ", "
-            strSql += "        preco_unitario_tabela = " + ValorNumericoBanco(PrecoUnitarioTabela, 4) + ", "
-            strSql += "        preco_unitario_sem_componente = " + ValorNumericoBanco(PrecoUnitarioSemComponente, 4) + ", "
-            strSql += "        cod_unidade = " + IIf(String.IsNullOrEmpty(Trim(CodUnidade)) OrElse CodUnidade = "0", "null", "'" + CodUnidade + "'") + ", "
-            strSql += "        narrativa = '" + Narrativa + "', "
-            strSql += "        icms_substituicao = " + ValorNumericoBanco(ICMSST, 4) + ", "
-            strSql += "        perc_desconto = " + ValorNumericoBanco(PercentualDesconto, 4) + ", "
-            strSql += "        valor_desconto = " + ValorNumericoBanco(ValorDesconto, 4) + ", "
-            strSql += "        valor_ipi = " + ValorNumericoBanco(IPI, 4) + ", "
-            strSql += "        valor_icms = " + ValorNumericoBanco(ICMS, 4) + ", "
-            strSql += "        cod_natur_oper = '" + CodNaturOper + "', "
-            strSql += "        valor_total_mercadoria = " + ValorNumericoBanco(ValorTotal, 4) + ", "
-            strSql += "        valor_mercadoria = " + ValorNumericoBanco(ValorMercadoria, 4) + ", "
-            strSql += "        aliquota_icms = " + ValorNumericoBanco(AliquotaICMS, 4) + ", "
-            strSql += "        aliquota_ipi = " + ValorNumericoBanco(AliquotaIPI, 4) + ", "
-            strSql += "        base_icms_substituicao = " + ValorNumericoBanco(BaseICMSSubstituicao, 4) + ", "
-            strSql += "        altura = " + ValorNumericoBanco(Altura, 2) + ", "
-            strSql += "        largura = " + ValorNumericoBanco(Largura, 2) + ", "
-            strSql += "        espessura = " + ValorNumericoBanco(Espessura, 4) + ", "
-            strSql += "        perc_desconto_unitario1 = " + ValorNumericoBanco(PercDescontoUnitario1, 4) + ", "
-            strSql += "        perc_desconto_unitario2 = " + ValorNumericoBanco(PercDescontoUnitario2, 4) + ", "
-            strSql += "        perc_desconto_unitario3 = " + ValorNumericoBanco(PercDescontoUnitario3, 4) + ", "
-            strSql += "        perc_desconto_unitario4 = " + ValorNumericoBanco(PercDescontoUnitario4, 4) + ", "
-            strSql += "        perc_desconto_unitario5 = " + ValorNumericoBanco(PercDescontoUnitario5, 4) + ", "
-            strSql += "        perc_acrescimo_unitario = " + ValorNumericoBanco(PercAcrescimoUnitario, 4) + ", "
-            strSql += "        recurso                 = " + ValorNumericoBanco(Recurso, 4) + ", "
-            strSql += "        prazo_entrega = " + PrazoEntrega + ", "
-            strSql += "        tp_prazo_entrga = " + TpPrazoEntrega + ", "
-
-            If String.IsNullOrEmpty(NumeroSerie) Then
-                strSql += "        numero_serie = null,"
-            Else
-                strSql += "        numero_serie = '" + NumeroSerie + "', "
-            End If
-
-            strSql += "        aux1 = '" + Aux1 + "', "
-            strSql += "        aux2 = '" + Aux2 + "', "
-            strSql += "        aux3 = '" + Aux3 + "', "
-            strSql += "        aux4 = '" + Aux4 + "', "
-            strSql += "        aux5 = '" + Aux5 + "', "
-            strSql += "        aux6 = '" + Aux6 + "', "
-            strSql += "        aux7 = '" + Aux7 + "', "
-            strSql += "        aux8 = '" + Aux8 + "', "
-            strSql += "        aux9 = '" + Aux9 + "', "
-            strSql += "        aux10 = '" + Aux10 + "',"
-            strSql += "        aux11 = '" + Aux11 + "', "
-            strSql += "        aux12 = '" + Aux12 + "'"
-            strSql += "        fd_acao_desejada_funcao = '" + FdAcaoDesejadaFuncao + "', "
+            strSql += "    set fd_acao_desejada_funcao = '" + FdAcaoDesejadaFuncao + "', "
             strSql += "        fd_coloracao = " + FdColoracao + ", "
             strSql += "        fd_cor_referencia = '" + FdCorReferencia + "', "
             strSql += "        fd_descricao_produto = '" + FdDescricaoProduto + "', "
             strSql += "        fd_nome_produto = '" + FdNomeProduto + "', "
             strSql += "        fd_odor = '" + FdOdor + "', "
             strSql += "        fd_odor_direcionamento = '" + FdOdorDirecionamento + "', "
-            strSql += "        fd_odor_referencia = '" + FdOdorReferencia + "', "
+            strSql += "        fd_odor_referencia = '" + FdOdorReferencia + "' "
             strSql += "  where empresa = " + Empresa
-            strSql += "    and estabelecimento = " + Estabelecimento
             strSql += "    and cod_negociacao_cliente = " + CodNegociacao
             strSql += "    and seq_item = " + SeqItem
             objAcessoDados.ExecutarSql(strSql)

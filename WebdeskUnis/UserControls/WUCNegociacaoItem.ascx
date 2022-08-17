@@ -22,8 +22,8 @@
         width: 34px;
     }
 </style>
-<%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
-<cc1:ToolkitScriptManager ID="ScriptManager1" runat="server"></cc1:ToolkitScriptManager>
+<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+<%--<cc1:ToolkitScriptManager ID="ScriptManager1" runat="server"></cc1:ToolkitScriptManager>--%>
     
 <table class="TextoCadastro_BGBranco" style="border-collapse: collapse" 
     width="100%">
@@ -72,6 +72,7 @@
                    <td class="CelulaCampoCadastro" style="text-align: right"><asp:Label ID="Label4" runat="server" Text="Coloração:"></asp:Label></td>
                    <td><asp:DropDownList ID="DdlFdColoracao" runat="server" 
                 CssClass="CampoCadastro" Width="383px">
+                        <asp:ListItem Value="-1">-- Selecione --</asp:ListItem>
                         <asp:ListItem Value="1">Incolor</asp:ListItem>
                         <asp:ListItem Value="2">Com Pigmento</asp:ListItem>
             </asp:DropDownList></td>
@@ -80,6 +81,7 @@
                    <td class="CelulaCampoCadastro" style="text-align: right"><asp:Label ID="Label6" runat="server" Text="Odor:"></asp:Label></td>
                    <td><asp:DropDownList ID="DdlFdOdor" runat="server" 
                 CssClass="CampoCadastro" Width="383px">
+                        <asp:ListItem Value="-1">-- Selecione --</asp:ListItem>
                         <asp:ListItem Value="1">Inodoro</asp:ListItem>
                         <asp:ListItem Value="2">Sem adição de Fragrância</asp:ListItem>
                         <asp:ListItem Value="3">Com adição de Fragrância</asp:ListItem>
@@ -89,6 +91,7 @@
                    <td class="CelulaCampoCadastro" style="text-align: right"><asp:Label ID="Label10" runat="server" Text="Odor Direcionamento:"></asp:Label></td>
                    <td><asp:DropDownList ID="DdlFdOdorDirecionamento" runat="server" 
                 CssClass="CampoCadastro" Width="383px">
+                        <asp:ListItem Value="-1">-- Selecione --</asp:ListItem>
                         <asp:ListItem Value="1">Doce</asp:ListItem>
                         <asp:ListItem Value="2">Floral</asp:ListItem>
                         <asp:ListItem Value="3">Frutal</asp:ListItem>
@@ -159,12 +162,10 @@
             Item:</td>
         <td class="CelulaCampoCadastro" colspan="5">
             <asp:TextBox ID="TxtCodItem" runat="server" CssClass="CampoCadastro" 
-                Width="90px" AutoPostBack="True"></asp:TextBox>
-                        <asp:ImageButton ID="BtnFiltrarItem" runat="server" 
-                ImageUrl="~/Imagens/search.png" ToolTip="Pesquisar" 
-                onclientclick="ShowEditModal('../Pesquisas/WFPItemReferencia.aspx?textbox=TxtCodItem','EditModalPopupClientes','IframeEdit');" />
+                Width="90px" AutoPostBack="True" Enabled="false"></asp:TextBox>
+                       
 
-            <asp:Label ID="LblDescricaoItem" runat="server" Font-Bold="False" 
+            <asp:Label ID="LblDescricaoItem" runat="server" Font-Bold="True" 
                 Height="17px"></asp:Label>
         </td>
         <td class="auto-style3">
@@ -175,7 +176,7 @@
             Referência:</td>
         <td class="CelulaCampoCadastro" colspan="5">
             <asp:DropDownList ID="DdlReferencia" runat="server" 
-                CssClass="CampoCadastro" Width="383px">
+                CssClass="CampoCadastro" Width="383px" Enabled="false">
             </asp:DropDownList>
         </td>
         <td class="auto-style3">
@@ -187,7 +188,7 @@
         </td>
         <td class="CelulaCampoCadastro" colspan="5">
             <asp:TextBox ID="TxtNarrativa" runat="server" CssClass="CampoCadastro" 
-                Height="40px" TextMode="MultiLine" Width="379px"></asp:TextBox>
+                Height="40px" TextMode="MultiLine" Width="379px" Enabled="false"></asp:TextBox>
         </td>
         <td class="auto-style3">
             &nbsp;</td>
@@ -197,7 +198,7 @@
             Natur. Oper:</td>
         <td class="CelulaCampoCadastro" colspan="5">
             <asp:DropDownList ID="DdlNaturOper" runat="server" CssClass="CampoCadastro" 
-                Width="385px" AutoPostBack="True">
+                Width="385px" AutoPostBack="True" Enabled="false">
             </asp:DropDownList>
         </td>
         <td class="auto-style3">
@@ -209,7 +210,7 @@
         </td>
         <td class="CelulaCampoCadastro" colspan="5">
             <asp:DropDownList ID="DdlEquipamento" runat="server" CssClass="auto-style1" 
-                Width="300px" Height="16px">
+                Width="300px" Height="16px" Enabled="false">
             </asp:DropDownList>
             <span>&nbsp;<asp:ImageButton ID="BtnIncluirEquipamento" runat="server" 
                 AlternateText="Novo Equipamento" Height="16px" ToolTip="Incluir Equipamento" 
@@ -265,7 +266,7 @@
         </td>
         <td class="CelulaCampoCadastro" style="vertical-align: bottom" width="77px">
             <asp:TextBox ID="TxtQuantidade" runat="server" AutoPostBack="True" 
-                style="text-align:right" CssClass="CampoCadastro" Width="75px"></asp:TextBox>
+                style="text-align:right" CssClass="CampoCadastro" Width="75px" Enabled="false"></asp:TextBox>
         </td>
         <td class="CelulaCampoCadastro" 
             style="vertical-align: bottom; text-align: right" width="70">
@@ -273,8 +274,8 @@
                 Text="Preço Unit.:" ToolTip="Preço unitário" Width="89px"></asp:Label>
         </td>
         <td class="CelulaCampoCadastro" style="vertical-align: bottom" width="70">
-            <uc1:TextBoxNumerico ID="TxtPrecoUnitario" runat="server" Width="75" 
-                QtdCasas="4" AutoPostBack="True" />
+            <asp:TextBox ID="TxtPrecoUnitario" runat="server" Width="75" 
+                QtdCasas="4" AutoPostBack="True" Enabled="false" />
         </td>
         <td class="CelulaCampoCadastro" 
             style="text-align: right; vertical-align: bottom" width="55">
@@ -291,7 +292,7 @@
             Qtde. UD:</td>
         <td class="CelulaCampoCadastro">
             <asp:TextBox ID="TxtQuantidadeUD" runat="server" AutoPostBack="True" 
-                style="text-align:right" CssClass="CampoCadastro" Width="75px"></asp:TextBox>
+                style="text-align:right" CssClass="CampoCadastro" Width="75px"  Enabled="false"></asp:TextBox>
         </td>
         <td class="CelulaCampoCadastro" style="text-align: right">
             Preço UD:</td>
@@ -302,8 +303,8 @@
         <td class="CelulaCampoCadastro" style="text-align: right">
             Desc.(R$):</td>
         <td class="CelulaCampoCadastro" width="77">
-            <uc1:TextBoxNumerico ID="TxtValorDesconto" runat="server" Width="75" 
-                QtdCasas="2" AutoPostBack="True" />
+            <asp:TextBox ID="TxtValorDesconto2" runat="server" Width="75" 
+                QtdCasas="2" AutoPostBack="True"  Enabled="false" />
         </td>
         <td class="auto-style3">
             &nbsp;</td>
@@ -313,8 +314,8 @@
             Prazo Entrega:</td>
         <td class="CelulaCampoCadastro" colspan="2">
             <asp:TextBox ID="TxtPrazoEntrega" runat="server" CssClass="CampoCadastro" 
-                style="margin-bottom: 0px" Width="30px"></asp:TextBox>
-            <asp:DropDownList ID="DdlTpPrazoEntrega" runat="server" 
+                style="margin-bottom: 0px" Width="30px"  Enabled="false"></asp:TextBox>
+            <asp:DropDownList ID="DdlTpPrazoEntrega" runat="server"  Enabled="false"
                 CssClass="CampoCadastro">
                 <asp:ListItem Value="1">Dia(s)</asp:ListItem>
                 <asp:ListItem Value="2">Mês(es)</asp:ListItem>

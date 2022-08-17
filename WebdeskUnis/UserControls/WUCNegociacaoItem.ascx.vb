@@ -246,39 +246,45 @@
     End Function
     Private Function CarregaObjeto(ByRef objNegociacaoItem As UCLNegociacaoItem) As UCLNegociacaoItem
 
-        objNegociacaoItem.CodItem = TxtCodItem.Text.GetValidInputContent
-        objNegociacaoItem.Referencia = DdlReferencia.SelectedValue
-        objNegociacaoItem.Quantidade = Quantidade
-        objNegociacaoItem.QuantidadeUD = QuantidadeUD
-        objNegociacaoItem.PrecoUnitario = TxtPrecoUnitario.Text
-        objNegociacaoItem.PrecoUnitarioUD = LblValorUD.Text
-        'objNegociacaoItem.CodUnidade = DdlUD.SelectedValue
-        objNegociacaoItem.Narrativa = TxtNarrativa.Text.GetValidInputContent
-        objNegociacaoItem.AliquotaIPI = LblAliquotaIPI.Text
-        objNegociacaoItem.AliquotaICMS = LblAliquotaICMS.Text
-        objNegociacaoItem.BaseICMSSubstituicao = LblBaseIcmsSubstituicao.Text
-        objNegociacaoItem.ICMSST = LblICMSST.Text
-        objNegociacaoItem.IPI = LblIPI.Text
-        objNegociacaoItem.ValorTotal = LblValorTotal.Text
-        objNegociacaoItem.CodNaturOper = DdlNaturOper.SelectedValue
-        objNegociacaoItem.ICMS = LblICMS.Text
-        objNegociacaoItem.ValorDesconto = TxtValorDesconto.Text
-        objNegociacaoItem.ValorMercadoria = LblValorMercadoria.Text
-        objNegociacaoItem.PrazoEntrega = TxtPrazoEntrega.Text
-        objNegociacaoItem.TpPrazoEntrega = DdlTpPrazoEntrega.SelectedValue
+        'objNegociacaoItem.CodItem = TxtCodItem.Text.GetValidInputContent
+        'objNegociacaoItem.Referencia = DdlReferencia.SelectedValue
+        'objNegociacaoItem.Quantidade = Quantidade
+        'objNegociacaoItem.QuantidadeUD = QuantidadeUD
+        'objNegociacaoItem.PrecoUnitario = TxtPrecoUnitario.Text
+        'objNegociacaoItem.PrecoUnitarioUD = LblValorUD.Text
+        ''objNegociacaoItem.CodUnidade = DdlUD.SelectedValue
+        'objNegociacaoItem.Narrativa = TxtNarrativa.Text.GetValidInputContent
+        'objNegociacaoItem.AliquotaIPI = LblAliquotaIPI.Text
+        'objNegociacaoItem.AliquotaICMS = LblAliquotaICMS.Text
+        'objNegociacaoItem.BaseICMSSubstituicao = LblBaseIcmsSubstituicao.Text
+        'objNegociacaoItem.ICMSST = LblICMSST.Text
+        'objNegociacaoItem.IPI = LblIPI.Text
+        'objNegociacaoItem.ValorTotal = LblValorTotal.Text
+        'objNegociacaoItem.CodNaturOper = DdlNaturOper.SelectedValue
+        'objNegociacaoItem.ICMS = LblICMS.Text
+        'objNegociacaoItem.ValorDesconto = TxtValorDesconto2.Text
+        'objNegociacaoItem.ValorMercadoria = LblValorMercadoria.Text
+        'objNegociacaoItem.PrazoEntrega = TxtPrazoEntrega.Text
+        'objNegociacaoItem.TpPrazoEntrega = DdlTpPrazoEntrega.SelectedValue
         objNegociacaoItem.FdAcaoDesejadaFuncao = TxtFdAcaoDesejadaProduto.Text
-        objNegociacaoItem.FdColoracao = DdlFdColoracao.SelectedValue
+        If DdlFdColoracao.SelectedValue > 0 Then
+            objNegociacaoItem.FdColoracao = DdlFdColoracao.SelectedValue
+        End If
+        If DdlFdOdor.SelectedValue > 0 Then
+            objNegociacaoItem.FdOdor = DdlFdOdor.SelectedValue
+        End If
+        If DdlFdOdorDirecionamento.SelectedValue > 0 Then
+            objNegociacaoItem.FdOdorDirecionamento = DdlFdOdorDirecionamento.SelectedValue
+        End If
         objNegociacaoItem.FdCorReferencia = TxtFdCorReferencia.Text
         objNegociacaoItem.FdDescricaoProduto = TxtFdDescricaoProduto.Text
         objNegociacaoItem.FdNomeProduto = TxtFdNomeProduto.Text
-        objNegociacaoItem.FdOdor = DdlFdOdor.SelectedValue
-        objNegociacaoItem.FdOdorDirecionamento = DdlFdOdorDirecionamento.SelectedValue
         objNegociacaoItem.FdOdorReferencia = TxtFdOdorReferencia.Text
-        If DdlEquipamento.SelectedValue = "-1" OrElse DdlEquipamento.SelectedValue = "0" Then
-            objNegociacaoItem.NumeroSerie = ""
-        Else
-            objNegociacaoItem.NumeroSerie = DdlEquipamento.SelectedValue
-        End If
+        'If DdlEquipamento.SelectedValue = "-1" OrElse DdlEquipamento.SelectedValue = "0" Then
+        '    objNegociacaoItem.NumeroSerie = ""
+        'Else
+        '    objNegociacaoItem.NumeroSerie = DdlEquipamento.SelectedValue
+        'End If
 
         Return objNegociacaoItem
     End Function
@@ -286,29 +292,27 @@
     Private Function Gravar() As Boolean
         Try
             Dim objNegociacaoItem As New UCLNegociacaoItem(StrConexaoUsuario(Session("GlUsuario")))
-            If IsDigitacaoOK() Then
-                If Acao = "ALTERAR" Then
-                    objNegociacaoItem.CodNegociacao = CodNegociacao
-                    objNegociacaoItem.SeqItem = SeqItem
-                    objNegociacaoItem.Empresa = Session("GlEmpresa")
-                    objNegociacaoItem.Estabelecimento = Session("GlEstabelecimento")
-                    objNegociacaoItem.Buscar()
-                    objNegociacaoItem = CarregaObjeto(objNegociacaoItem)
-                    objNegociacaoItem.Alterar()
 
-                End If
-                Return True
-            End If
-            Return False
+            objNegociacaoItem.CodNegociacao = CodNegociacao
+            objNegociacaoItem.SeqItem = SeqItem
+            objNegociacaoItem.Empresa = Session("GlEmpresa")
+            'objNegociacaoItem.Estabelecimento = Session("GlEstabelecimento")
+            objNegociacaoItem.Buscar()
+            objNegociacaoItem = CarregaObjeto(objNegociacaoItem)
+            objNegociacaoItem.Alterar()
+            Return True
+
         Catch ex As Exception
             LblErro.Text = ex.Message.ToString
+            Return False
         End Try
     End Function
 
     Protected Sub BtnGravar_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtnGravar.Click
         Try
             If Gravar() Then
-                Response.Redirect("WGNegociacaoItem.aspx")
+                LblErro.Text = "Item alterado com sucesso."
+                'Response.Redirect("WGNegociacaoItem.aspx")
             End If
         Catch ex As Exception
             LblErro.Text = ex.Message.ToString
@@ -327,7 +331,7 @@
             objCalculoImposto.QuantidadeUD = QuantidadeUD
             objCalculoImposto.PrecoUnitario = CDbl(TxtPrecoUnitario.Text) + GetTotalOpcionais()
             objCalculoImposto.PrecoUnitarioUD = CDbl(LblValorUD.Text)
-            objCalculoImposto.ValorDesconto = CDbl(TxtValorDesconto.Text)
+            objCalculoImposto.ValorDesconto = CDbl(TxtValorDesconto2.Text)
             objCalculoImposto.CodEmitente = LblCodEmitente.Text
             objCalculoImposto.CNPJ = LblCNPJ.Text
             objCalculoImposto.CodNaturOper = DdlNaturOper.SelectedValue
@@ -401,7 +405,7 @@
         LblICMSST.Text = objNegociacaoItem.ICMSST
         LblIPI.Text = objNegociacaoItem.IPI
         TxtNarrativa.Text = objNegociacaoItem.Narrativa
-        TxtValorDesconto.Text = objNegociacaoItem.ValorDesconto
+        TxtValorDesconto2.Text = objNegociacaoItem.ValorDesconto
         LblICMS.Text = objNegociacaoItem.ICMS
         LblValorMercadoria.Text = objNegociacaoItem.ValorMercadoria
         DdlNaturOper.SelectedValue = objNegociacaoItem.CodNaturOper
