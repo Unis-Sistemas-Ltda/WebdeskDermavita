@@ -1,0 +1,62 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MPManual.master.vb" Inherits="WebdeskUnis.MPManual" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../CSSUnis.css" rel="stylesheet" type="text/css" />
+    <link href="../Ajax.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Titulo">Manuais e Vídeos</div>
+    <table width="100%" style="border-collapse: collapse">
+        <tr>
+            <td style="line-height: 25px; text-align: right; ">
+                Rotina:&nbsp;</td>
+            <td style="line-height: 25px">
+                <asp:TextBox ID="TxtRotina" runat="server" CssClass="CampoCadastro" 
+                    style="margin-bottom: 0px" Width="200px"></asp:TextBox>
+                <asp:Button ID="BtnPesquisar" runat="server" Text="Pesquisar Rotina" />
+            </td>
+        </tr>
+        <tr>
+            <td style="line-height: 25px; text-align: right; ">
+                Selecione o sistema:&nbsp;</td>
+            <td style="line-height: 25px">
+                <asp:Menu ID="MnuSistemas" runat="server" Orientation="Horizontal" 
+                                Font-Size="9pt" ForeColor="#7C6F57" DynamicHorizontalOffset="2" 
+                                StaticSubMenuIndent="10px" RenderingMode="List" 
+                    Font-Bold="False" BackColor="#F9FBFB">
+                                <StaticHoverStyle BackColor="#D7E7EA"/>
+                                <StaticSelectedStyle BackColor="#D7E7EA"/>
+                                <StaticMenuItemStyle ForeColor="#333333" VerticalPadding="5px" HorizontalPadding="15px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top; text-align: left; width: 165px; padding-left: 7px;">
+                <br />
+                &nbsp;&nbsp;Módulos<br />
+                <asp:Menu ID="MnuModulos" runat="server" Orientation="Vertical"
+                                Font-Size="8pt" ForeColor="#7C6F57" 
+                    DynamicHorizontalOffset="2" StaticSubMenuIndent="10px" RenderingMode="List" 
+                    Width="165px" BackColor="#F9FBFB">
+                                <StaticHoverStyle BackColor="#D7E7EA"/>
+                                <StaticSelectedStyle BackColor="#D7E7EA"/>
+                                <StaticMenuItemStyle ForeColor="#333333" VerticalPadding="6px" 
+                                    HorizontalPadding="10px"/>
+                </asp:Menu>
+            </td>
+            <td style="vertical-align: top; top: 0px; left: 0px; position: relative; min-width: 800px">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

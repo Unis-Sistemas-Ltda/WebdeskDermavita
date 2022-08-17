@@ -1,0 +1,227 @@
+﻿body
+{
+    font-size: 8pt;
+    font-family: Verdana;
+    margin: 0px;
+    padding: 0px;
+    color: #666666;
+    max-width: 100%;
+}
+
+a
+{
+    color: #333333;
+    font-weight: 700;
+}
+
+.LinkFundoVerde
+{
+    background-color: #90EE90;
+    color: #006400;
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #006400;
+}
+
+.LinkFundoAmarelo
+{
+    border: 1px solid #800000;
+    color: #800000;
+    background-color: #FFFFCC;
+    padding: 4px;
+}
+
+.CampoCadastro .Cadastro
+
+.TextoCadastro
+{
+    font-size: 8pt;
+    text-align: right;
+    color: #666666;
+    background-color: #EFEFEF;
+}
+.Botao
+{
+    border: 1px solid #C0C0C0;
+    background-position: 100% 100%;
+    font-size: 8pt;
+    text-align: center;
+    color: #444444;
+    background-color: #F7F7F7;
+    }
+.Botao:hover
+{
+    text-decoration: underline;
+}
+input[type=button], input[type=submit]
+{
+    border: 1px solid #C0C0C0;
+    background-position: 100% 100%;
+    font-size: 8pt;
+    text-align: center;
+    color: #444444;
+    font-family: verdana;
+    background-color: #F7F7F7;
+    height: 19px;
+}
+input[type=button]:hover, input[type=submit]:hover
+{
+    text-decoration: underline;
+}
+.TituloCadastro
+{
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    color: #FF6600;
+    background-color: #FFFFFF;
+    line-height: 28px;
+}
+.CelulaCampoCadastro
+{
+    text-align: left;
+}
+.Erro
+{
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    color: #CC0000;
+    
+}
+.Menu
+{
+    
+    font-size: 09pt;
+    font-weight: normal;
+    color: #999999;
+}
+.TextoCadastro_BGBranco
+{
+    font-size: 8pt;
+    text-align: left;
+    
+    color: #666666;
+    background-color: #FFFFFF;
+}
+.Titulo2
+{
+    
+    font-size: 10pt;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+}
+.TituloRelatorio
+{
+    
+    font-size: 12pt;
+    color: #336699;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+}
+.TituloMovimento
+{
+    
+    font-size: 12pt;
+    font-weight: bold;
+    color: #666666;
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 28px;
+}
+.TituloConsulta
+{
+    
+    font-size: 12pt;
+    font-weight: bold;
+    color: #339966;
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 28px;
+}
+.Titulo
+{
+    
+    font-size: 12pt;
+    color: #336699;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    line-height: 28px;
+    padding-left: 5px;
+}
+
+.LinkFAQ
+{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 8pt;
+    padding-left: 10px;
+}
+
+.LinkFAQ:hover
+{
+    text-decoration: underline;
+}
+
+.LinkGrid
+{
+    text-decoration: none;
+    font-size: 8pt;
+}
+
+.LinkGrid:hover
+{
+    text-decoration: underline;
+}
+
+.TextoRespostaFAQ
+{
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: justify;
+    font-size: 8pt;
+    color: #333333;
+}
+
+.LinkTextoFAQ
+{
+    color: Blue;
+}
+
+.LinhaDoGrid
+{
+    
+}
+
+.LinhaDoGrid:hover
+{
+    text-decoration: underline;
+    background-color: #EFEFEF;
+}
+
+.SubTitulo
+{
+    font-family: Trebuchet MS;
+    font-size: 9pt;
+    color: #114D71;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.TituloAnf
+{
+    font-family: Trebuchet MS;
+    font-size: 14pt;
+    font-weight: bold;
+    line-height: 60px;
+    background-image: url('http://www.webdeskanfarmag.com.br/Imagem/img-fundo-titulo.jpg');
+    color: #005BAC;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}

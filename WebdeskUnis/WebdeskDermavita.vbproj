@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37C211DE-13CC-4098-9C5D-60F88556651E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebdeskUnis</RootNamespace>
+    <AssemblyName>WebdeskUnis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebdeskUnis.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebdeskUnis.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.resources, Version=3.5.40412.0, Culture=pt, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="DataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="DataWindowInterop, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="Interop.ATLLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="PdfMetamorphosis, Version=4.0.5.20, Culture=neutral, PublicKeyToken=f77041e5caa5fc2f, processorArchitecture=MSIL" />
+    <Reference Include="Sybase.DataWindow.Db, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="Sybase.DataWindow.WebService.Runtime, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="Sybase.DataWindow.WebService.RuntimeRemoteLoader, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebDataWindow, Version=2.5.0.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da, processorArchitecture=x86" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax.css" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AjaxControlToolkit.pdb" />
+    <Content Include="bin\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\atl71.dll" />
+    <Content Include="bin\DataWindow.dll" />
+    <Content Include="bin\DataWindowInterop.dll" />
+    <Content Include="bin\Interop.ATLLib.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\msvcp71.dll" />
+    <Content Include="bin\msvcr71.dll" />
+    <Content Include="bin\PBDWN110.DLL" />
+    <Content Include="bin\PdfMetamorphosis.dll" />
+    <Content Include="bin\Sybase.DataWindow.Db.dll" />
+    <Content Include="bin\Sybase.DataWindow.WebService.Runtime.dll" />
+    <Content Include="bin\Sybase.DataWindow.WebService.RuntimeRemoteLoader.dll" />
+    <Content Include="bin\WebDataWindow.dll" />
+    <Content Include="CSSUnis.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Forms\WFAgendamentoAcademia.aspx" />
+    <Content Include="Forms\WFAtendimentoCabecalho.aspx" />
+    <Content Include="Forms\WFCadastroEmitente.aspx" />
+    <Content Include="Forms\WFConfiguracaoLogin.aspx" />
+    <Content Include="Forms\WFNegociacaoCabecalho.aspx" />
+    <Content Include="Forms\WFNegociacaoDetalhes.aspx" />
+    <Content Include="Forms\WFNegociacaoItem.aspx" />
+    <Content Include="Forms\WFNegociacaoOutrasInformacoes.aspx" />
+    <Content Include="Forms\WFNovaSenha.aspx" />
+    <Content Include="Forms\WFPrincipal.aspx" />
+    <Content Include="Forms\WFRedirect.aspx" />
+    <Content Include="Forms\WFRelAgendamentos.aspx" />
+    <Content Include="Forms\WFSolicitacaoDesenvolvimento.aspx" />
+    <Content Include="Forms\WFSolicitacaoDesenvolvimentoAnexo.aspx" />
+    <Content Include="Forms\WFSolicitacaoDesenvolvimentoDetalhes.aspx" />
+    <Content Include="Forms\WFSolicitacaoDesenvolvimentoFollowUp.aspx" />
+    <Content Include="Forms\WFTurma.aspx" />
+    <Content Include="Forms\WGAtendimento.aspx" />
+    <Content Include="Forms\WGDownloads.aspx" />
+    <Content Include="Forms\WGFAQ.aspx" />
+    <Content Include="Forms\WGManual.aspx" />
+    <Content Include="Forms\WGManual01.aspx" />
+    <Content Include="Forms\WGManual02.aspx" />
+    <Content Include="Forms\WGNegociacaoItem.aspx" />
+    <Content Include="Forms\WGNotasFiscais.aspx" />
+    <Content Include="Forms\WGRelatorios.aspx" />
+    <Content Include="Forms\WGSolicitacaoDesenvolvimento.aspx" />
+    <Content Include="Forms\WGSolicitacaoDesenvolvimentoAnexo.aspx" />
+    <Content Include="Forms\WGSolicitacaoDesenvolvimentoFollowUP.aspx" />
+    <Content Include="Forms\WGDadosCadastrais.aspx" />
+    <Content Include="Forms\WGPropostas.aspx" />
+    <Content Include="Forms\WGTitulo.aspx" />
+    <Content Include="Forms\WGTurma.aspx" />
+    <Content Include="Imagens\Barra-Central-Fundo-2.png" />
+    <Content Include="Imagens\Barra-Central-Fundo.png" />
+    <Content Include="Imagens\Barra-Lateral-Direita-2.png" />
+    <Content Include="Imagens\Barra-Lateral-Direita.png" />
+    <Content Include="Imagens\Barra-Lateral-Esquerda-2.png" />
+    <Content Include="Imagens\Barra-Lateral-Esquerda.png" />
+    <Content Include="Imagens\branco.jpg" />
+    <Content Include="Imagens\BtnEditar.png" />
+    <Content Include="Imagens\BtnExcel.png" />
+    <Content Include="Imagens\BtnExcluir.png" />
+    <Content Include="Imagens\BtnImprimir.gif" />
+    <Content Include="Imagens\BtnIncluir.png" />
+    <Content Include="Imagens\BtnNovoRegistro.png" />
+    <Content Include="Imagens\BtnSelecionar.ico" />
+    <Content Include="Imagens\Calcular-Economia.png" />
+    <Content Include="Imagens\copiar.png" />
+    <Content Include="Imagens\DetalheItemNegociacao.png" />
+    <Content Include="Imagens\ImgClientes.png" />
+    <Content Include="Imagens\logo-cappta.png" />
+    <Content Include="Imagens\logo-cliente.png" />
+    <Content Include="Imagens\logo-stone.png" />
+    <Content Include="Imagens\Nova-Simulacao.png" />
+    <Content Include="Imagens\PainelNegociacoes.png" />
+    <Content Include="Imagens\PainelTarefas.png" />
+    <Content Include="Imagens\painel_atendimento.png" />
+    <Content Include="Imagens\Relogio-Economia.png" />
+    <Content Include="Imagens\search.png" />
+    <Content Include="Imagens\unis.jpg" />
+    <Content Include="JSUnis.js" />
+    <Content Include="OutrosControles\TextBoxCEP.ascx" />
+    <Content Include="OutrosControles\TextBoxCNPJ.ascx" />
+    <Content Include="OutrosControles\TextBoxCNPJCPF.ascx" />
+    <Content Include="OutrosControles\TextBoxCPF.ascx" />
+    <Content Include="OutrosControles\TextBoxData.ascx" />
+    <Content Include="OutrosControles\TextBoxHora.ascx" />
+    <Content Include="OutrosControles\TextBoxInteiro.ascx" />
+    <Content Include="OutrosControles\TextBoxNumerico.ascx" />
+    <Content Include="simulador-tef\WFAdesaoTEF.aspx" />
+    <Content Include="simulador-tef\WFAtualizacaoCadastralUnidade.aspx" />
+    <Content Include="simulador-tef\WFAtualizacaoCadastro.aspx" />
+    <Content Include="simulador-tef\WFRedirecionar.aspx" />
+    <Content Include="simulador-tef\WFSimulador.aspx" />
+    <Content Include="simulador-tef\WFSimulador02.aspx" />
+    <Content Include="simulador-tef\WFTEFSaibaMais.aspx" />
+    <Content Include="simulador-tef\WFValidacaoAdesao.aspx" />
+    <Content Include="UserControls\WUCDadosCadastrais.ascx" />
+    <Content Include="UserControls\WUCNegociacaoCabecalho.ascx" />
+    <Content Include="UserControls\WUCNegociacaoDetalhes.ascx" />
+    <Content Include="UserControls\WUCNegociacaoItem.ascx" />
+    <Content Include="UserControls\WUCNegociacaoOutrasInformacoes.ascx" />
+    <Content Include="WFLogin1.aspx" />
+    <Content Include="WFLogin130.aspx" />
+    <Content Include="WFLogin222.aspx" />
+    <Content Include="UserControls\WUCAtendimentoCabecalho_Suporte.ascx" />
+    <Content Include="UserControls\WUCAtualizacaoCadastroEmitente.ascx" />
+    <Content Include="UserControls\WUCAtualizacaoCadastroEmitenteFiliais2.ascx" />
+    <Content Include="UserControls\WUCContato.ascx" />
+    <Content Include="UserControls\WUCFollowUpAtendimento.ascx" />
+    <Content Include="UserControls\WUCFrame.ascx" />
+    <Content Include="UserControls\WUCSolicitacaoDesenvolvimento.ascx" />
+    <Content Include="UserControls\WUCSolicitacaoDesenvolvimentoAnexo.ascx" />
+    <Content Include="UserControls\WUCSolicitacaoDesenvolvimentoFollowUp.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WFDesconectar.aspx" />
+    <Content Include="WFLogin.aspx" />
+    <Content Include="WFLogin3441.aspx" />
+    <Content Include="WFLogin381.aspx" />
+    <Content Include="WFLogin388.aspx" />
+    <Content Include="WFLogin453.aspx" />
+    <Content Include="WFLogin752.aspx" />
+    <Content Include="WFLogin766.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Globais\Extensions.vb" />
+    <Compile Include="Classes\Globais\UCLClasseGenerica.vb" />
+    <Compile Include="Classes\Globais\UCLLogin.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Globais\UCLTabelaGenerica.vb" />
+    <Compile Include="Classes\Globais\UCLTabelaGenericaCampo.vb" />
+    <Compile Include="Classes\Modelo\UCLAcessoCampanhaTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLAdesaoTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLAdesaoTEFBandeira.vb" />
+    <Compile Include="Classes\Modelo\UCLAdesaoTEFEmitente.vb" />
+    <Compile Include="Classes\Modelo\UCLAdesaoTEFLoja.vb" />
+    <Compile Include="Classes\Modelo\UCLAgendaAluno.vb" />
+    <Compile Include="Classes\Modelo\UCLBandeiraTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLGrupoTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLGrupoTEFBandeira.vb" />
+    <Compile Include="Classes\Modelo\UCLGrupoTEFCliente.vb" />
+    <Compile Include="Classes\Modelo\UCLGrupoTEFClienteOperadora.vb" />
+    <Compile Include="Classes\Modelo\UCLGrupoTEFClienteOperadoraBandeira.vb" />
+    <Compile Include="Classes\Modelo\UCLOperadoraBandeiraTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLOperadoraTEF.vb" />
+    <Compile Include="Classes\Modelo\UCLParametrosWebdesk.vb" />
+    <Compile Include="Classes\Modelo\UCLTurma.vb" />
+    <Compile Include="Classes\Modelo\UCLTurmaHorario.vb" />
+    <Compile Include="Classes\UCLAcaoFollowUp.vb" />
+    <Compile Include="Classes\Globais\UCLAcessoDados.vb" />
+    <Compile Include="Classes\UCLAdesaoParceriaSantander.vb" />
+    <Compile Include="Classes\UCLAdesaoParceriaSantanderCNPJ.vb" />
+    <Compile Include="Classes\UCLAgenteVendas.vb" />
+    <Compile Include="Classes\UCLAnalista.vb" />
+    <Compile Include="Classes\UCLAtendimento.vb" />
+    <Compile Include="Classes\UCLAtendimentoFollowUp.vb" />
+    <Compile Include="Classes\UCLAtendimentoFollowUpAnexo.vb" />
+    <Compile Include="Classes\UCLBoleto.vb" />
+    <Compile Include="Classes\UCLCalculoImposto.vb" />
+    <Compile Include="Classes\UCLCanalVenda.vb" />
+    <Compile Include="Classes\UCLCarteiraCRM.vb" />
+    <Compile Include="Classes\UCLCidade.vb" />
+    <Compile Include="Classes\UCLClienteFinanceiro.vb" />
+    <Compile Include="Classes\UCLCondicaoPagamento.vb" />
+    <Compile Include="Classes\UCLContato.vb" />
+    <Compile Include="Classes\UCLDepartamentoAtendimento.vb" />
+    <Compile Include="Classes\UCLEmail.vb" />
+    <Compile Include="Classes\UCLEmailSaida.vb" />
+    <Compile Include="Classes\UCLEmitente.vb" />
+    <Compile Include="Classes\UCLEmpresa.vb" />
+    <Compile Include="Classes\UCLEndereco.vb" />
+    <Compile Include="Classes\UCLEnderecoEmitente.vb" />
+    <Compile Include="Classes\UCLEquipamentoCliente.vb" />
+    <Compile Include="Classes\UCLEstabelecimento.vb" />
+    <Compile Include="Classes\UCLEstado.vb" />
+    <Compile Include="Classes\UCLEtapaNegociacao.vb" />
+    <Compile Include="Classes\UCLEtapaTarefaPadrao.vb" />
+    <Compile Include="Classes\UCLFollowUpEmitente.vb" />
+    <Compile Include="Classes\UCLFormaPagto.vb" />
+    <Compile Include="Classes\UCLFunilVenda.vb" />
+    <Compile Include="Classes\UCLGrupoClienteFinanceiro.vb" />
+    <Compile Include="Classes\UCLItem.vb" />
+    <Compile Include="Classes\UCLItemReferencia.vb" />
+    <Compile Include="Classes\UCLModulo.vb" />
+    <Compile Include="Classes\UCLMoeda.vb" />
+    <Compile Include="Classes\UCLNaturezaOperacao.vb" />
+    <Compile Include="Classes\UCLNegociacao.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\UCLNegociacaoItem.vb" />
+    <Compile Include="Classes\UCLPais.vb" />
+    <Compile Include="Classes\UCLParametrosFaturamento.vb" />
+    <Compile Include="Classes\UCLParametrosManutencao.vb" />
+    <Compile Include="Classes\UCLRotina.vb" />
+    <Compile Include="Classes\UCLSistema.vb" />
+    <Compile Include="Classes\UCLSLA.vb" />
+    <Compile Include="Classes\UCLSolicitacaoDesenvolvimento.vb" />
+    <Compile Include="Classes\UCLSolicitacaoDesenvolvimentoAnexo.vb" />
+    <Compile Include="Classes\UCLSolicitacaoDesenvolvimentoFollowUp.vb" />
+    <Compile Include="Classes\UCLStatusChamado.vb" />
+    <Compile Include="Classes\UCLTipoChamado.vb" />
+    <Compile Include="Classes\UCLTratarDadosDB.vb" />
+    <Compile Include="Classes\UCLUsuario.vb" />
+    <Compile Include="Classes\UCLVersaoSistema.vb" />
+    <Compile Include="Classes\Globais\VariaveisGlobais.vb" />
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFAgendamentoAcademia.aspx.designer.vb">
+      <DependentUpon>WFAgendamentoAcademia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFAgendamentoAcademia.aspx.vb">
+      <DependentUpon>WFAgendamentoAcademia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFAtendimentoCabecalho.aspx.designer.vb">
+      <DependentUpon>WFAtendimentoCabecalho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFAtendimentoCabecalho.aspx.vb">
+      <DependentUpon>WFAtendimentoCabecalho.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFCadastroEmitente.aspx.designer.vb">
+      <DependentUpon>WFCadastroEmitente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFCadastroEmitente.aspx.vb">
+      <DependentUpon>WFCadastroEmitente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFConfiguracaoLogin.aspx.designer.vb">
+      <DependentUpon>WFConfiguracaoLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFConfiguracaoLogin.aspx.vb">
+      <DependentUpon>WFConfiguracaoLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoCabecalho.aspx.designer.vb">
+      <DependentUpon>WFNegociacaoCabecalho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoCabecalho.aspx.vb">
+      <DependentUpon>WFNegociacaoCabecalho.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoDetalhes.aspx.designer.vb">
+      <DependentUpon>WFNegociacaoDetalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoDetalhes.aspx.vb">
+      <DependentUpon>WFNegociacaoDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoItem.aspx.designer.vb">
+      <DependentUpon>WFNegociacaoItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoItem.aspx.vb">
+      <DependentUpon>WFNegociacaoItem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoOutrasInformacoes.aspx.designer.vb">
+      <DependentUpon>WFNegociacaoOutrasInformacoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFNegociacaoOutrasInformacoes.aspx.vb">
+      <DependentUpon>WFNegociacaoOutrasInformacoes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFNovaSenha.aspx.designer.vb">
+      <DependentUpon>WFNovaSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFNovaSenha.aspx.vb">
+      <DependentUpon>WFNovaSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFPrincipal.aspx.designer.vb">
+      <DependentUpon>WFPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFPrincipal.aspx.vb">
+      <DependentUpon>WFPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFRedirect.aspx.designer.vb">
+      <DependentUpon>WFRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFRedirect.aspx.vb">
+      <DependentUpon>WFRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFRelAgendamentos.aspx.designer.vb">
+      <DependentUpon>WFRelAgendamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFRelAgendamentos.aspx.vb">
+      <DependentUpon>WFRelAgendamentos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimento.aspx.designer.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimento.aspx.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoAnexo.aspx.designer.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoAnexo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoAnexo.aspx.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoAnexo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoDetalhes.aspx.designer.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoDetalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoDetalhes.aspx.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoFollowUp.aspx.designer.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFSolicitacaoDesenvolvimentoFollowUp.aspx.vb">
+      <DependentUpon>WFSolicitacaoDesenvolvimentoFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WFTurma.aspx.designer.vb">
+      <DependentUpon>WFTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WFTurma.aspx.vb">
+      <DependentUpon>WFTurma.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGAtendimento.aspx.designer.vb">
+      <DependentUpon>WGAtendimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGAtendimento.aspx.vb">
+      <DependentUpon>WGAtendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGDownloads.aspx.designer.vb">
+      <DependentUpon>WGDownloads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGDownloads.aspx.vb">
+      <DependentUpon>WGDownloads.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGFAQ.aspx.designer.vb">
+      <DependentUpon>WGFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGFAQ.aspx.vb">
+      <DependentUpon>WGFAQ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGManual.aspx.designer.vb">
+      <DependentUpon>WGManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGManual.aspx.vb">
+      <DependentUpon>WGManual.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGManual01.aspx.designer.vb">
+      <DependentUpon>WGManual01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGManual01.aspx.vb">
+      <DependentUpon>WGManual01.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGManual02.aspx.designer.vb">
+      <DependentUpon>WGManual02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGManual02.aspx.vb">
+      <DependentUpon>WGManual02.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoItem.aspx.designer.vb">
+      <DependentUpon>WGNegociacaoItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGNegociacaoItem.aspx.vb">
+      <DependentUpon>WGNegociacaoItem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGNotasFiscais.aspx.designer.vb">
+      <DependentUpon>WGNotasFiscais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGNotasFiscais.aspx.vb">
+      <DependentUpon>WGNotasFiscais.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGRelatorios.aspx.designer.vb">
+      <DependentUpon>WGRelatorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGRelatorios.aspx.vb">
+      <DependentUpon>WGRelatorios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimento.aspx.designer.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimento.aspx.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimentoAnexo.aspx.designer.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimentoAnexo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimentoAnexo.aspx.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimentoAnexo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimentoFollowUP.aspx.designer.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimentoFollowUP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGSolicitacaoDesenvolvimentoFollowUP.aspx.vb">
+      <DependentUpon>WGSolicitacaoDesenvolvimentoFollowUP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGDadosCadastrais.aspx.designer.vb">
+      <DependentUpon>WGDadosCadastrais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGDadosCadastrais.aspx.vb">
+      <DependentUpon>WGDadosCadastrais.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGPropostas.aspx.designer.vb">
+      <DependentUpon>WGPropostas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGPropostas.aspx.vb">
+      <DependentUpon>WGPropostas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGTitulo.aspx.designer.vb">
+      <DependentUpon>WGTitulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGTitulo.aspx.vb">
+      <DependentUpon>WGTitulo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WGTurma.aspx.designer.vb">
+      <DependentUpon>WGTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WGTurma.aspx.vb">
+      <DependentUpon>WGTurma.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Master\MPManual.Master.designer.vb">
+      <DependentUpon>MPManual.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MPManual.Master.vb">
+      <DependentUpon>MPManual.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCEP.ascx.designer.vb">
+      <DependentUpon>TextBoxCEP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCEP.ascx.vb">
+      <DependentUpon>TextBoxCEP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCNPJ.ascx.designer.vb">
+      <DependentUpon>TextBoxCNPJ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCNPJ.ascx.vb">
+      <DependentUpon>TextBoxCNPJ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCNPJCPF.ascx.designer.vb">
+      <DependentUpon>TextBoxCNPJCPF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCNPJCPF.ascx.vb">
+      <DependentUpon>TextBoxCNPJCPF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCPF.ascx.designer.vb">
+      <DependentUpon>TextBoxCPF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxCPF.ascx.vb">
+      <DependentUpon>TextBoxCPF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxData.ascx.designer.vb">
+      <DependentUpon>TextBoxData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxData.ascx.vb">
+      <DependentUpon>TextBoxData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxHora.ascx.designer.vb">
+      <DependentUpon>TextBoxHora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxHora.ascx.vb">
+      <DependentUpon>TextBoxHora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxInteiro.ascx.designer.vb">
+      <DependentUpon>TextBoxInteiro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxInteiro.ascx.vb">
+      <DependentUpon>TextBoxInteiro.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxNumerico.ascx.designer.vb">
+      <DependentUpon>TextBoxNumerico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OutrosControles\TextBoxNumerico.ascx.vb">
+      <DependentUpon>TextBoxNumerico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFAdesaoTEF.aspx.designer.vb">
+      <DependentUpon>WFAdesaoTEF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFAdesaoTEF.aspx.vb">
+      <DependentUpon>WFAdesaoTEF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFAtualizacaoCadastralUnidade.aspx.designer.vb">
+      <DependentUpon>WFAtualizacaoCadastralUnidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFAtualizacaoCadastralUnidade.aspx.vb">
+      <DependentUpon>WFAtualizacaoCadastralUnidade.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFAtualizacaoCadastro.aspx.designer.vb">
+      <DependentUpon>WFAtualizacaoCadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFAtualizacaoCadastro.aspx.vb">
+      <DependentUpon>WFAtualizacaoCadastro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFRedirecionar.aspx.designer.vb">
+      <DependentUpon>WFRedirecionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFRedirecionar.aspx.vb">
+      <DependentUpon>WFRedirecionar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFSimulador.aspx.designer.vb">
+      <DependentUpon>WFSimulador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFSimulador.aspx.vb">
+      <DependentUpon>WFSimulador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFSimulador02.aspx.designer.vb">
+      <DependentUpon>WFSimulador02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFSimulador02.aspx.vb">
+      <DependentUpon>WFSimulador02.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFTEFSaibaMais.aspx.designer.vb">
+      <DependentUpon>WFTEFSaibaMais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFTEFSaibaMais.aspx.vb">
+      <DependentUpon>WFTEFSaibaMais.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="simulador-tef\WFValidacaoAdesao.aspx.designer.vb">
+      <DependentUpon>WFValidacaoAdesao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="simulador-tef\WFValidacaoAdesao.aspx.vb">
+      <DependentUpon>WFValidacaoAdesao.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCDadosCadastrais.ascx.designer.vb">
+      <DependentUpon>WUCDadosCadastrais.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCDadosCadastrais.ascx.vb">
+      <DependentUpon>WUCDadosCadastrais.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoCabecalho.ascx.designer.vb">
+      <DependentUpon>WUCNegociacaoCabecalho.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoCabecalho.ascx.vb">
+      <DependentUpon>WUCNegociacaoCabecalho.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoDetalhes.ascx.designer.vb">
+      <DependentUpon>WUCNegociacaoDetalhes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoDetalhes.ascx.vb">
+      <DependentUpon>WUCNegociacaoDetalhes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoItem.ascx.designer.vb">
+      <DependentUpon>WUCNegociacaoItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoItem.ascx.vb">
+      <DependentUpon>WUCNegociacaoItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoOutrasInformacoes.ascx.designer.vb">
+      <DependentUpon>WUCNegociacaoOutrasInformacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCNegociacaoOutrasInformacoes.ascx.vb">
+      <DependentUpon>WUCNegociacaoOutrasInformacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin1.aspx.designer.vb">
+      <DependentUpon>WFLogin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin1.aspx.vb">
+      <DependentUpon>WFLogin1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin130.aspx.designer.vb">
+      <DependentUpon>WFLogin130.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin130.aspx.vb">
+      <DependentUpon>WFLogin130.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin222.aspx.designer.vb">
+      <DependentUpon>WFLogin222.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin222.aspx.vb">
+      <DependentUpon>WFLogin222.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCAtendimentoCabecalho_Suporte.ascx.designer.vb">
+      <DependentUpon>WUCAtendimentoCabecalho_Suporte.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCAtendimentoCabecalho_Suporte.ascx.vb">
+      <DependentUpon>WUCAtendimentoCabecalho_Suporte.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCAtualizacaoCadastroEmitente.ascx.designer.vb">
+      <DependentUpon>WUCAtualizacaoCadastroEmitente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCAtualizacaoCadastroEmitente.ascx.vb">
+      <DependentUpon>WUCAtualizacaoCadastroEmitente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCAtualizacaoCadastroEmitenteFiliais2.ascx.designer.vb">
+      <DependentUpon>WUCAtualizacaoCadastroEmitenteFiliais2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCAtualizacaoCadastroEmitenteFiliais2.ascx.vb">
+      <DependentUpon>WUCAtualizacaoCadastroEmitenteFiliais2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCContato.ascx.designer.vb">
+      <DependentUpon>WUCContato.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCContato.ascx.vb">
+      <DependentUpon>WUCContato.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCFollowUpAtendimento.ascx.designer.vb">
+      <DependentUpon>WUCFollowUpAtendimento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCFollowUpAtendimento.ascx.vb">
+      <DependentUpon>WUCFollowUpAtendimento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCFrame.ascx.designer.vb">
+      <DependentUpon>WUCFrame.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCFrame.ascx.vb">
+      <DependentUpon>WUCFrame.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimento.ascx.designer.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimento.ascx.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimentoAnexo.ascx.designer.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimentoAnexo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimentoAnexo.ascx.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimentoAnexo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimentoFollowUp.ascx.designer.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimentoFollowUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WUCSolicitacaoDesenvolvimentoFollowUp.ascx.vb">
+      <DependentUpon>WUCSolicitacaoDesenvolvimentoFollowUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFDesconectar.aspx.designer.vb">
+      <DependentUpon>WFDesconectar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFDesconectar.aspx.vb">
+      <DependentUpon>WFDesconectar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin.aspx.designer.vb">
+      <DependentUpon>WFLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin.aspx.vb">
+      <DependentUpon>WFLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin3441.aspx.designer.vb">
+      <DependentUpon>WFLogin3441.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin3441.aspx.vb">
+      <DependentUpon>WFLogin3441.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin381.aspx.designer.vb">
+      <DependentUpon>WFLogin381.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin381.aspx.vb">
+      <DependentUpon>WFLogin381.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin388.aspx.designer.vb">
+      <DependentUpon>WFLogin388.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin388.aspx.vb">
+      <DependentUpon>WFLogin388.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin453.aspx.designer.vb">
+      <DependentUpon>WFLogin453.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin453.aspx.vb">
+      <DependentUpon>WFLogin453.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin752.aspx.designer.vb">
+      <DependentUpon>WFLogin752.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin752.aspx.vb">
+      <DependentUpon>WFLogin752.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WFLogin766.aspx.designer.vb">
+      <DependentUpon>WFLogin766.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFLogin766.aspx.vb">
+      <DependentUpon>WFLogin766.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\DW25.lic" />
+    <Content Include="Master\MPManual.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Profile1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ATLLib">
+      <Guid>{44EC0535-400F-11D0-9DCD-00A0C90391D3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Downloads\" />
+    <Folder Include="Manual\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21581</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21582/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
