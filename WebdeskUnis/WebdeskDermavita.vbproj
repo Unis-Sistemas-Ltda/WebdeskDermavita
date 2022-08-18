@@ -162,26 +162,16 @@
   <ItemGroup>
     <Content Include="Ajax.css" />
     <Content Include="bin\AjaxControlToolkit.dll" />
-    <Content Include="bin\AjaxControlToolkit.pdb" />
-    <Content Include="bin\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\atl71.dll" />
     <Content Include="bin\DataWindow.dll" />
     <Content Include="bin\DataWindowInterop.dll" />
     <Content Include="bin\Interop.ATLLib.dll" />
     <Content Include="bin\itextsharp.dll" />
-    <Content Include="bin\msvcp71.dll" />
-    <Content Include="bin\msvcr71.dll" />
-    <Content Include="bin\PBDWN110.DLL" />
     <Content Include="bin\PdfMetamorphosis.dll" />
-    <Content Include="bin\Sybase.DataWindow.Db.dll" />
-    <Content Include="bin\Sybase.DataWindow.WebService.Runtime.dll" />
-    <Content Include="bin\Sybase.DataWindow.WebService.RuntimeRemoteLoader.dll" />
     <Content Include="bin\WebDataWindow.dll" />
     <Content Include="CSSUnis.css" />
     <Content Include="Default.aspx" />
     <Content Include="Forms\WFAgendamentoAcademia.aspx" />
     <Content Include="Forms\WFAtendimentoCabecalho.aspx" />
-    <Content Include="Forms\WFCadastroEmitente.aspx" />
     <Content Include="Forms\WFConfiguracaoLogin.aspx" />
     <Content Include="Forms\WFNegociacaoCabecalho.aspx" />
     <Content Include="Forms\WFNegociacaoDetalhes.aspx" />
@@ -232,9 +222,8 @@
     <Content Include="Imagens\copiar.png" />
     <Content Include="Imagens\DetalheItemNegociacao.png" />
     <Content Include="Imagens\ImgClientes.png" />
-    <Content Include="Imagens\logo-cappta.png" />
+    <Content Include="Imagens\logo-cliente-2.png" />
     <Content Include="Imagens\logo-cliente.png" />
-    <Content Include="Imagens\logo-stone.png" />
     <Content Include="Imagens\Nova-Simulacao.png" />
     <Content Include="Imagens\PainelNegociacoes.png" />
     <Content Include="Imagens\PainelTarefas.png" />
@@ -259,7 +248,6 @@
     <Content Include="simulador-tef\WFSimulador02.aspx" />
     <Content Include="simulador-tef\WFTEFSaibaMais.aspx" />
     <Content Include="simulador-tef\WFValidacaoAdesao.aspx" />
-    <Content Include="UserControls\WebUserControl1.ascx" />
     <Content Include="UserControls\WUCDadosCadastrais.ascx" />
     <Content Include="UserControls\WUCNegociacaoCabecalho.ascx" />
     <Content Include="UserControls\WUCNegociacaoDetalhes.ascx" />
@@ -390,13 +378,6 @@
     </Compile>
     <Compile Include="Forms\WFAtendimentoCabecalho.aspx.vb">
       <DependentUpon>WFAtendimentoCabecalho.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Forms\WFCadastroEmitente.aspx.designer.vb">
-      <DependentUpon>WFCadastroEmitente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\WFCadastroEmitente.aspx.vb">
-      <DependentUpon>WFCadastroEmitente.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Forms\WFConfiguracaoLogin.aspx.designer.vb">
@@ -758,13 +739,6 @@
       <DependentUpon>WFValidacaoAdesao.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="UserControls\WebUserControl1.ascx.designer.vb">
-      <DependentUpon>WebUserControl1.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\WebUserControl1.ascx.vb">
-      <DependentUpon>WebUserControl1.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="UserControls\WUCDadosCadastrais.ascx.designer.vb">
       <DependentUpon>WUCDadosCadastrais.ascx</DependentUpon>
     </Compile>
@@ -950,7 +924,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\DW25.lic" />
     <Content Include="Master\MPManual.Master" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
