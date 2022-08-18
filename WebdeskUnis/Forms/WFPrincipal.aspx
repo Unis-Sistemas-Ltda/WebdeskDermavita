@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; height: 100%">
 <head runat="server">
-    <title>Results CRM</title>
+    <title>WebDesk Grupo Dermavita & Planters</title>
     <link href="../CSSUnis.css" rel="stylesheet" type="text/css" />
     <style>
        .adjustedZIndex
@@ -25,7 +25,7 @@
                 <table style="width:100%; border-collapse: collapse;">
                     <tr>
                         <td rowspan="2" style="width: 70px; background-color: #F9FBFB;">
-                            <img alt="Unis Sistemas" src="../Imagens/logo-cliente.png" 
+                            <img alt="Grupo Dermavita & Planters" src="../Imagens/logo-cliente.png" 
                                 style="height: 57px" /></td>
                         <td style="text-align: left; background-color: #F9FBFB;">
                             <asp:Label ID="LblRazaoSocial" runat="server" CssClass="CampoCadastro"></asp:Label>
@@ -33,6 +33,9 @@
                         <td style="text-align: left; background-color: #F9FBFB;" class="CampoCadastro" >
                             <asp:Label ID="LblBoasVindas" runat="server"></asp:Label>
                         </td>
+                        <td rowspan="2" style="width: 70px; background-color: #F9FBFB;">
+                            <img alt="Grupo Dermavita & Planters" src="../Imagens/logo-cliente-2.png" 
+                                style="height: 57px" /></td>
                         <td style="text-align: center; background-color: #F4FFFF; width: 230px;" 
                             rowspan="2">
                             <asp:Label ID="LblNomeUsuario" runat="server" CssClass="CampoCadastro"></asp:Label>

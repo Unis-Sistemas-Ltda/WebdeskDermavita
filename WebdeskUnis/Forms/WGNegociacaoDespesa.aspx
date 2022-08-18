@@ -12,7 +12,7 @@
     <div >
         <asp:ImageButton ID="BtnNovoRegistro" runat="server" 
             AlternateText="Novo Registro" ImageUrl="~/Imagens/BtnNovoRegistro.png" 
-            style="text-align: right" />
+            style="text-align: right" Enabled="False" Visible="False" />
     
     
         <br />
