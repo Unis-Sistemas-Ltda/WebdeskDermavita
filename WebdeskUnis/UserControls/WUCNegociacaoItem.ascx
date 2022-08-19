@@ -61,8 +61,8 @@
             style="border-left-style: solid; border-width: 1px; border-color: #DBDBDB">
            <table>
                <tr>
-                   <td></td>
-                   <td></td>
+                   <td class="CelulaCampoCadastro" style="text-align: left; font-size:small;" colspan="2">Preencha abaixo a Ficha de desenvolvimento:</td>
+                  
                </tr>
                <tr>
                    <td></td>
