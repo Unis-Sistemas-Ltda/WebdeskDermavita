@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>WebDesk Dermavita</title>
+    <title>WebDesk Grupo Dermavita & Planters</title>
     <link href="CSSUnis.css" rel="stylesheet" type="text/css" />
     </head>
 <body>

@@ -28,7 +28,7 @@
             Return _Pagina
         End Get
         Set(ByVal value)
-            _Pagina = value
+            _Pagina = "~/Forms/" + value
             IFPagina.Attributes.Item("SRC") = _Pagina
         End Set
     End Property
